@@ -24,10 +24,10 @@ def freshGaming():
 
 def nateCustomInstall():
     freshGaming()
-    ["sudo apt install kde-standard","sudo apt install timeshift"]
+    ["sudo apt install kde-standard","sudo apt install timeshift","sudo apt install chromium","sudo snap install spotify"]
     for i in lst:
         subprocess.call(i,shell=True)
-
+    print("I suggest installing sweet to either KDE or Gnome")
 
 
 
