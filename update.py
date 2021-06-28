@@ -24,7 +24,10 @@ def freshGaming():
 
 def nateCustomInstall():
     freshGaming()
-    subprocess.call("sudo apt install kde-standard",shell=True)
+    ["sudo apt install kde-standard","sudo apt install timeshift"]
+    for i in lst:
+        subprocess.call(i,shell=True)
+
 
 
 
