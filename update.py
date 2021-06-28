@@ -3,7 +3,7 @@ import subprocess
 
 def regUpdate():
     #maybe ask user if they want an update or a total update
-    subprocess.call("sudo apt update",shell=True)
+    subprocess.call("sudo apt update && sudo apt upgrade",shell=True)
 
 def freshUpdate():
     cmd="sudo apt update && sudo apt upgrage && sudo apt dist-upgrade && sudo autoremove && sudo autoclean"
@@ -21,9 +21,16 @@ def freshGaming():
     for i in lst:
         subprocess.call(i,shell=True)
 
+
+def nateCustomInstall():
+    freshGaming()
+    subprocess.call("sudo apt install kde-standard",shell=True)
+
+
+
 def main():
 
-    lst=["Update","Fresh install update","Fresh install for gaming"]
+    lst=["Update system","Fresh install update","Fresh install for gaming","Nate's Custom install"]
 
     for i in lst:
         print(lst.index(i),i)
@@ -38,7 +45,9 @@ def main():
 
     elif cmd == "2":
         freshGaming()
-        
+
+    elif cmd == "3":
+        nateCustomInstall()
 
 
     print("Your PC has now been updated.")
